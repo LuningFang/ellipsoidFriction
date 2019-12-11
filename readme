@@ -1,0 +1,11 @@
+Each thread corresponds to each contact
+
+Simulate an ellipsoid dropping on three other ellipsoids that are fixed (ground with curved surface)
+
+Friction force computation to be packed in one function, use inline or macro instead of function calls
+
+Use double for everything (time step dt use float)
+
+Create a lookup table for friction model parameters (mu_s, mu_k, K_sl, K_r, K_sp, D_sl, D_r, D_sp) what being passed on are integers (type 1, 2, 3, …) for handling different materials.
+
+ Quaternions are used as inputs. Rotation matrix should never be computed, instead A=E*G^T, when A*s is needed, then do E*(G^T * s) and expand the entries  
